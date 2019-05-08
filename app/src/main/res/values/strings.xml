@@ -1,0 +1,13 @@
+<resources>
+    <plurals name="item_pacote_dias">
+        <item quantity="one">%d dia</item>
+        <item quantity="other">%d dias</item>
+    </plurals>
+    <string name="app_name">Alura Viagens</string>
+    <string name="especiais">Especiais</string>
+    <string name="pais">Brasil</string>
+    <string name="item_pacote_valor">R$ %.2f</string>
+    <string name="titulo_app_bar">Pacote</string>
+    <string name="conteudo_do_banner_inicial">Banner inicial dos pacotes</string>
+    <string name="conteudo_pacote_imagem">Imagem do local da viagem.</string>
+</resources>
