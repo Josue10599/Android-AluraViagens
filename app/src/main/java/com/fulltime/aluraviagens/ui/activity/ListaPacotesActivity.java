@@ -16,6 +16,7 @@ import java.util.List;
 
 public class ListaPacotesActivity extends AppCompatActivity {
 
+    public static final String PACOTE = "pacote";
     private ListView lista;
     private List<Pacote> pacotes;
 
@@ -23,28 +24,29 @@ public class ListaPacotesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_pacotes);
-
         setTitle(R.string.titulo_app_bar);
-
         configuraLista();
-
-        itemSelecionado();
     }
 
     private void configuraLista() {
-        lista = findViewById(R.id.lista_pacotes_listview);
         pacotes = new PacoteDAO().lista();
+        lista = findViewById(R.id.lista_pacotes_listview);
         lista.setAdapter(new ListaPacotesAdapter(pacotes, this));
+        itemSelecionado();
     }
 
     private void itemSelecionado() {
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(ListaPacotesActivity.this, ResumoPacoteActivity.class);
-                intent.putExtra("pacote", pacotes.get(position));
-                startActivity(intent);
+                mostraTelaResumoPacote(position);
             }
         });
+    }
+
+    private void mostraTelaResumoPacote(int position) {
+        Intent intent = new Intent(ListaPacotesActivity.this, ResumoPacoteActivity.class);
+        intent.putExtra(PACOTE, pacotes.get(position));
+        startActivity(intent);
     }
 }

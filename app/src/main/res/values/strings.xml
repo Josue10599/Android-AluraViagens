@@ -23,4 +23,8 @@
     <string name="finalizar_compra">FINALIZAR COMPRA</string>
     <string name="titulo_pagamento">Pagamento</string>
     <string name="mascara_para_nome_cartao">abcdefghijklmnopqrstuvwxyzç ABCDEFGHIJKLMNOPQRSTUVWXYZÇ</string>
+    <string name="titulo_resumo_compra">Resumo da compra</string>
+    <string name="parabens">Parabéns!</string>
+    <string name="compra_realizada_com_sucesso">Compra realizada com sucesso :)</string>
+    <string name="descricao_resumo_compra">Confira o resumo da compra:</string>
 </resources>
